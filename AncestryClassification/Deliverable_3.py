@@ -1,5 +1,4 @@
-"""For the optimal 𝜆, retrained model on the entire dataset of 𝑁 = 183 observations to obtain an estimate of the (𝑝 + 1) × 𝐾 model parameter matrix as 𝐁̂ and make predictions of 
-the probability for each of the 𝐾 = 5 classes for the 111 test individuals located in TestData_N111_p10.csv."""
+"""For the optimal 𝜆, retrained model on the entire dataset of 𝑁 = 183 observations to obtain an estimate of the (𝑝 + 1) × 𝐾 model parameter matrix as 𝐁̂ and make predictions of the probability for each of the 𝐾 = 5 classes for the 111 test individuals located in TestData_N111_p10.csv."""
 
 import pandas as pd
 import numpy as np

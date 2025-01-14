@@ -1,5 +1,4 @@
-"""Illustrated the effect of the tuning parameter on the inferred ridge regression coefficients by generating five plots (one for each of the 𝐾 = 5 ancestry classes) of 10 lines 
-(one for each of the 𝑝 = 10 features), with the 𝑦-axis as 𝛽̂𝑗𝑘, 𝑗 = 1,2, ... ,10 for the graph of class 𝑘, and 𝑥-axis the corresponding log-scaled tuning parameter value log10(𝜆) that 
+"""Illustrated the effect of the tuning parameter on the inferred ridge regression coefficients by generating five plots (one for each of the 𝐾 = 5 ancestry classes) of 10 lines (one for each of the 𝑝 = 10 features), with the 𝑦-axis as 𝛽̂𝑗𝑘, 𝑗 = 1,2, ... ,10 for the graph of class 𝑘, and 𝑥-axis the corresponding log-scaled tuning parameter value log10(𝜆) that 
 generated the particular 𝛽̂𝑗𝑘. Label both axes in all five plots as well as provide a legend for the lines."""
 
 import matplotlib.pyplot as plt

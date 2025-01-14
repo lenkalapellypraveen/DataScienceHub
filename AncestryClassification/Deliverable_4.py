@@ -1,4 +1,4 @@
-'''Implemented this project using statistical or machine learning libraries. Compared the results with the project with manual implementation'''
+'''Implemented this project using statistical or machine learning libraries. Compared the results with the project implemented manually'''
 
 # importing the libraries
 import numpy as np
