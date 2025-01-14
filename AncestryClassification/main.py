@@ -24,7 +24,7 @@ if __name__ == "__main__":
     feature_labels = feature_columns
 
     # loading the dataset, standardizing the features, and one-hot encoding the target variable
-    preprocessor = DataPreprocessor(r'C:\\Users\\prave\Documents\\TrainingData_N183_p10.csv', feature_columns, target_column)
+    preprocessor = DataPreprocessor(r'TrainingData.csv', feature_columns, target_column)
     input_standardized = preprocessor.standardize_features()
     target_one_hot = preprocessor.one_hot_encode_target()
 
@@ -37,19 +37,18 @@ if __name__ == "__main__":
 
     # Deliverable - 1
     plotter = PlotGenerator(lambda_values, ridge_coefficients, feature_labels, class_labels)
-    output_dir_1 = r'C:\Users\prave\Documents\DataEngineering\DataEngineeringHub\AncestryClassification\Deliverable_1_outputs'
+    output_dir_1 = r'Deliverable_1_outputs'
     plotter.generate(output_dir_1)
 
     # Deliverable - 2 (5-fold cross-validation)
     cross_validator = CrossValidation(model, folds=5, max_iterations=10000)
-    output_dir_2 = r'C:\Users\prave\Documents\DataEngineering\DataEngineeringHub\AncestryClassification\Deliverable_2_outputs'
+    output_dir_2 = r'Deliverable_2_outputs'
     cv_errors, best_lambda, min_avg_error = cross_validator.cross_validation(input_standardized, target_one_hot, lambda_values, output_dir_2)
     print(f'𝜆 value that generated the smallest CV(5) error is: {best_lambda}')
     print(f'smallest CV(5) error for Best λ is: {min_avg_error}')
 
-
     # Deliverable - 3 (Testing and Prediction)
-    test_data = pd.read_csv(r'C:\\Users\\prave\\Documents\\TestData_N111_p10.csv')
+    test_data = pd.read_csv(r'TestData.csv')
     test = Test(test_data, model, input_standardized, feature_columns, target_one_hot, class_labels, best_lambda)
     test.testing()
     test.prediction()

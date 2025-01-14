@@ -1,4 +1,5 @@
-"""**Deliverable 2:** Illustrate the effect of the tuning parameter on the cross validation error by generating a plot with the 𝑦-axis as CV(5) error, and the 𝑥-axis the corresponding log-scaled tuning parameter value log10(𝜆) that generated the particular CV(5) error. Label both axes in the plot. Without the log scaling of the tuning parameter 𝜆, the plots will look distorted."""
+"""Illustrated the effect of the tuning parameter on the cross validation error by generating a plot with the 𝑦-axis as CV(5) error, and the 𝑥-axis the corresponding log-scaled 
+tuning parameter value log10(𝜆) that generated the particular CV(5) error. Labeled both axes in the plot."""
 
 import matplotlib.pyplot as plt
 import numpy as np

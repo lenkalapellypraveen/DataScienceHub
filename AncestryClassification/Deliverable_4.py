@@ -1,3 +1,5 @@
+'''Implemented this project using statistical or machine learning libraries. Compared the results with the project with manual implementation'''
+
 # importing the libraries
 import numpy as np
 import pandas as pd
@@ -73,7 +75,7 @@ if __name__ == "__main__":
     feature_labels = feature_columns
 
     # Loading the training data
-    data_loader = DataLoader(filepath='/content/drive/MyDrive/Source_data/TrainingData_N183_p10.csv',
+    data_loader = DataLoader(filepath=r'TrainingData.csv',
                              feature_columns=feature_columns, target_column=target_column)
     X, y = data_loader.get_features_and_target()
 
@@ -131,7 +133,7 @@ class CrossValidator:
                 self.min_avg_error = self.avg_error
                 self.best_lambda = L
 
-        return cv_errors, self.best_lambda, self.min_avg_error
+        return cv_fold_errors, self.best_lambda, self.min_avg_error
 
     def plot_cv_errors(self):
         # Plotting the results
@@ -162,7 +164,7 @@ print(f'𝜆 value that generated the smallest CV(5) error is: {best_lambda}')
 print(f'smallest CV(5) error for Best λ is: {min_avg_error}')
 
 ################ Deliverable - 3 (Testing and Prediction)
-data_loader = DataLoader(filepath='/content/drive/MyDrive/Source_data/TestData_N111_p10.csv',
+data_loader = DataLoader(filepath='TestData.csv',
                              feature_columns=feature_columns, target_column=target_column)
 Xtest, ytest = data_loader.get_features_and_target()
 
@@ -185,7 +187,7 @@ for i, p in enumerate(probabilities_test_lb):
     print(f"Predicted Ancestry Label: {class_labels[predicted_labels_lb[i]]}\n")
 
 # Loading the TestData_N111_p10 dataset
-test_data_lb = pd.read_csv('/content/drive/MyDrive/Source_data/TestData_N111_p10.csv')
+test_data_lb = pd.read_csv('TestData.csv')
 test_features_lb = test_data_lb[feature_columns].values
 
 # Converting numerical labels to class names
