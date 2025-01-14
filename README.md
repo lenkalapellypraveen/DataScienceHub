@@ -1,4 +1,4 @@
-# DataEngineeringHub
+AncestryClassification
 
 In this project, I implemented a Ridge Regression model entirely from scratch to tackle the challenge of Ancestry Classification. This involved developing a custom algorithm capable of handling multiclass classification tasks by adjusting the regularization strength via the Ridge parameter to optimize model performance. 
 
