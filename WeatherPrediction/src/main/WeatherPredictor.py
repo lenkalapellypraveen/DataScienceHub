@@ -13,7 +13,7 @@ class Predictor:
                 raise ValueError(
                     "Missing data in future_data; all predictions require 'avgtemp_f', 'maxwind_mph', and 'avghumidity' keys.")
 
-            future_df = pd.DataFrame([future_data])  # Create a DataFrame for a single prediction
+            future_df = pd.DataFrame([future_data])
             logging.info("DataFrame created successfully for future data.")
             predictions = self.model.predict(future_df)
             logging.info("Predictions completed successfully.")

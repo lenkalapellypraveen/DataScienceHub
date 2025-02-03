@@ -15,20 +15,13 @@ weather_df = fetcher.fetch_weather_data()
 if not weather_df.empty:
     # Plot weather data
     plotter = WeatherPlotter(weather_data=weather_df)
-    plotter.plot_weather_data(save_path='C:\\Users\\prave\\Documents\\DataScience\\DataScienceHub\\WeatherPrediction\\src\\main\\temperature_trends.png')  # Specify the file name and path here
+    plotter.plot_weather_data(save_path='C:\\Users\\prave\\Documents\\DataScience\\DataScienceHub\\WeatherPrediction\\src\\main\\temperature_trends.png')
 
     # Build and evaluate model
     builder = ModelBuilder(weather_data=weather_df)
     model = builder.build_and_evaluate_model()
 
-    '''
-    # Make future predictions
-    predictor = Predictor(model=model)
-    future_data = {'avgtemp_f': [84], 'maxwind_mph': [6], 'avghumidity': [45]}
-    predicted_temps = predictor.predict_future_temperatures(future_data)
-    print(f"Predicted max temperature for future date: {predicted_temps}")
-    '''
-
+    # load the template
     file_loader = FileSystemLoader('C:\\Users\\prave\\Documents\\DataScience\\DataScienceHub\\WeatherPrediction\\src\\test')
     env = Environment(loader=file_loader)
     template = env.get_template('Template.txt')
